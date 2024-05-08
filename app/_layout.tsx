@@ -58,6 +58,19 @@ function RootLayoutNav() {
         }}
         />
 
+        <Stack.Screen name='login' options={{ 
+          title: '',
+          headerBackTitle: '',
+          headerShadowVisible: false,
+          headerStyle: { backgroundColor: Colors.background},
+          headerLeft: () => (
+            <TouchableOpacity onPress={router.back}>
+              <Ionicons name='arrow-back' size={34} color={Colors.dark}/>
+            </TouchableOpacity>
+          ),
+        }}
+        />
+
       </Stack>
   );
 }

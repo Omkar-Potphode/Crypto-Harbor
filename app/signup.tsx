@@ -10,6 +10,8 @@ const Page = () => {
   const [phoneNum, setPhoneNum] = useState('');
   const router = useRouter();
 
+  const onSignUp = async () => {};
+
   return (
     <KeyboardAvoidingView
     style={{flex: 1}}
@@ -52,8 +54,10 @@ const Page = () => {
           defaultStyles.pillButton,
           phoneNum !== "" ? styles.enabled : styles.disabled,
           {marginBottom: 10},
-        ]}>
-          <Text>Sign up</Text>
+        ]}
+        onPress={onSignUp}
+        >
+          <Text style={defaultStyles.buttonText}>Sign up</Text>
         </TouchableOpacity>
 
       </View>
